@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Star Ranch's Custom Poolside JukeBox</h1>
+    <div class="row">
+        {% set cards = ["Playlist 1", "Playlist 2", "Playlist 3", "Playlist 4", "Playlist 5", "Playlist 6"]  %}
+        {% for card in cards %}
+            <div class="card col-md-2 m-2">
+                <div class="row no-gutters">
+                    <img src="static/images/cd-cover-612x612.jpg">
+                </div>
+                <div class="row no-gutters">
+                    <p class="text-center fw-bold">{{ card }}</p>
+                    <p class="text-justified fs-6 fw-light fst-italic">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum.</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>    
+
+{% endblock %}
